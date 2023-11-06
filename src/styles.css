@@ -1,0 +1,103 @@
+h1 {
+  text-align: center;
+}
+
+input {
+  border-radius: 16px;
+  border: none;
+  padding: 6px 16px;
+  outline: none;
+}
+
+button {
+  border-radius: 16px;
+  border: none;
+  padding: 6px 10px;
+}
+
+button:hover {
+  background-color: #ff7fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#flame-row {
+  display: flex;
+}
+
+#card-flame {
+  background-color: #c6ffe2;
+  width: 400px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.headers {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px;
+  margin-top: 0px;
+}
+
+#card-aria {
+  overflow: auto;
+  height: 400px;
+}
+
+.note-cards {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 0px 8px;
+  margin: 8px;
+  margin-top: 0px;
+  width: 350px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.note-cards h2 {
+  width: 300px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.note-cards p {
+  text-align: right;
+}
+
+#text-flame {
+  background-color: #ffffe0;
+  width: 400px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.active {
+  background-color: #eee;
+}
+
+#text-aria {
+  background-color: #fff;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+#textTitle {
+  font-weight: bold;
+  background-color: transparent;
+  width: 350px;
+  padding: 0;
+  font-size: 120%;
+}
+#textContent {
+  background-color: transparent;
+  width: 350px;
+  border: none;
+  height: 300px;
+}
