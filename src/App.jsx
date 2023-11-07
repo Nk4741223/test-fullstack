@@ -1,14 +1,5 @@
-// import "./App.css";
-
-// function App() {
-//   const initialURL = "https://pokeapi.co/api/v2/pokemon";
-//   return <div className="App"></div>;
-// }
-
-// export default App;
-
-import React, { useEffect } from "react";
 import "./styles.css";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { CardHeader } from "./components/CardHeader";
 import { CardAria } from "./components/CardAria";
@@ -43,6 +34,7 @@ export const App = () => {
       active: false,
     },
   ]);
+
   //テキスト
   const [text, setText] = useState({ title: "", content: "" });
 
@@ -50,7 +42,7 @@ export const App = () => {
   const [activeCardIndex, setActiveCardIndex] = useState("initialValue");
   const [preActiveCardIndex, setPreActiveCardIndex] = useState("initialValue");
 
-  //追加ボタン
+  //追加ボタン（③ノートの作成）
   const onClickAdd = () => {
     //アクティブカード番号を変更
     setPreActiveCardIndex(activeCardIndex);
@@ -60,13 +52,13 @@ export const App = () => {
     changeActiveCard("add");
   };
 
-  //デリートボタン
+  //デリートボタン（⑤ノートの削除）
   const onClickDelete = () => {
     //アクティブカードを変更（削除）
     activeCardIndex !== "initialValue" && changeActiveCard("delete");
   };
 
-  //カードボタン
+  //カードボタン（②ノートの読み込み）
   const onClickCard = (index) => {
     //アクティブカードを押しても処理なし
     if (activeCardIndex === index) {
@@ -131,7 +123,7 @@ export const App = () => {
     setCards(newCards);
   };
 
-  //ノート変更
+  //ノート変更（④ノートの更新）
   const onChangeTextTitle = (event) => {
     if (activeCardIndex !== "initialValue") {
       const newCards = [...cards];
@@ -143,7 +135,6 @@ export const App = () => {
       setText(newText);
     }
   };
-
   const onChangeTextContent = (event) => {
     if (activeCardIndex !== "initialValue") {
       const newCards = [...cards];
